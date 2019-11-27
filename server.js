@@ -38,6 +38,8 @@ app.post("/", (req, res) => {
     connection.query("INSERT INTO burgers (burger_name) VALUES (?)",
     [req.body.burger_name], (err, result) => {
         if (err) throw err;
+        res.json({ id: result.insertId });
+        console.log({ id: result.insertId });
     });
 });
 
