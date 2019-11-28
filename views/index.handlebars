@@ -1,8 +1,9 @@
 <ul>
     {{#each burgers}}
     <li>
-        <p>{{burger_name}} Eaten: {{devoured}}</p>
-        <button id="{{id}}" class=" btn devourBtn">Devour</button>
+        <p id="{{id}}">{{burger_name}} Eaten: {{devoured}}
+        <button data-burgerId="{{id}}" class=" btn devourBtn">Devour</button>
+        </p>
     </li>
     {{/each}}
 </ul>
