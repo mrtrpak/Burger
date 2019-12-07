@@ -41,3 +41,10 @@ img {
     text-align: center;
 }
 
+.eaten {
+    display: grid;
+    position: relative;
+    grid-template-columns: auto auto;
+    grid-column-gap: 20%;
+}
+

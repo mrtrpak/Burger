@@ -27,7 +27,6 @@ if (process.env.JAWSDB_URL) {
 
 connection.connect(err => {
     if (err) throw err;
-    console.log("connected as id " + connection.threadId);
 });
 
 // routes
@@ -38,7 +37,15 @@ app.get("/", (req, res) => {
     });
 });
 
-app.post("/", (req, res) => {
+app.put("/:id", (req, res) => {
+    const id = req.params.id;
+    connection.query("UPDATE burgers SET devoured = ? WHERE ?", [1, {id: id}], (err, data) => {
+        if (err) throw err;
+        res.end();
+    });
+});
+
+app.post("/:id", (req, res) => {
     connection.query("INSERT INTO burgers (burger_name) VALUES (?)",
     [req.body.burger_name], (err, result) => {
         if (err) throw err;
