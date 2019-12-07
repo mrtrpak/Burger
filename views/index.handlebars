@@ -1,17 +1,20 @@
-<div class="eaten">     
+<div class="grid">     
     <ul>
     {{#each burgers}}
         {{#unless devoured}}
         <li class="burgers">
-            <p id="{{id}}">{{burger_name}} Eaten: {{devoured}}
-                <button id="{{id}}" class="btn devourBtn">Devour</button>
-            </p>
+                <p id="{{id}}">
+                    <button id="{{id}}" class="btn devourBtn">Devour</button>
+                    {{burger_name}}
+                </p>
         </li>
         {{/unless}}
     {{/each}}
     </ul>   
 
-    <ul>
+    <img src="/assets/img/burger.jpg" alt="Burger Image">
+
+    <ul class="eaten">
     {{#each burgers}}
         {{#if devoured}}
         <div>
@@ -30,6 +33,6 @@
     <h3>Add a Burger</h3>
     <form>
         <textarea name="burgerName" type="text" id="burgerText" placeholder="Enter Burger Here"></textarea><br>
-        <button type="submit" class="btn" id="newBurgerBtn">Add Burger</button>
+        <button type="submit" id="newBurgerBtn">Add Burger</button>
     </form>
 </div>
