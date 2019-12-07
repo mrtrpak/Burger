@@ -45,12 +45,19 @@ app.put("/:id", (req, res) => {
     });
 });
 
-app.post("/:id", (req, res) => {
+app.post("/:burger", (req, res) => {
     connection.query("INSERT INTO burgers (burger_name) VALUES (?)",
     [req.body.burger_name], (err, result) => {
         if (err) throw err;
         res.json({ id: result.insertId });
         console.log({ id: result.insertId });
+    });
+});
+
+app.delete("/:id", (req, res) => {
+    connection.query("DELETE FROM burgers WHERE id = ?", [req.params.id], (err, result) => {
+        if (err) throw err;
+        res.end();
     });
 });
 

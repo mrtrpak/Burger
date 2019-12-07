@@ -4,7 +4,7 @@
         {{#unless devoured}}
         <li class="burgers">
             <p id="{{id}}">{{burger_name}} Eaten: {{devoured}}
-            <button id="{{id}}" class="btn devourBtn">Devour</button>
+                <button id="{{id}}" class="btn devourBtn">Devour</button>
             </p>
         </li>
         {{/unless}}
@@ -16,7 +16,9 @@
         {{#if devoured}}
         <div>
             <li>
-                <p>{{burger_name}}</p>
+                <p>{{burger_name}}
+                    <button id="{{id}}" class="btn dltBtn">Delete</button>
+                </p>
             </li>
         </div>
         {{/if}}

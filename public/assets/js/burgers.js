@@ -23,4 +23,14 @@ $(document).ready(() => {
             location.reload();
         });
     });
+
+    $(document).on("click", ".dltBtn", e => {
+        let id = e.target.id;
+        console.log("id of", id);
+        $.ajax("/" + id, {
+            type: "DELETE"
+        }).then(res => {
+            location.reload();
+        });
+    });
 });
