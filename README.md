@@ -1,5 +1,13 @@
 # Burger
 
+## Table of Contents
+
+- [Synopsis](#Synopsis)
+- [Getting Started](#Getting-Started)
+- [Tools Used](#Tools-Used)
+- [Difficulties](#Difficulties)
+- [Link](#Link)
+
 ## Synopsis
 This application is designed to be able to utilize a database, update the database based on user input and update the database. This was used to better my skills with using heroku, mysql and bringing it all together to bring a working app. 
 
